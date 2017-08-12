@@ -23,7 +23,7 @@ class EventViewSet(APIView):
       events = Events.objects.all()
       serializer = EventSerializer(events, many=True)
       return Response(serializer.data)
-     
+    
 
     def post(self, request, format=None):
       serializer = EventSerializer(data=request.data)
