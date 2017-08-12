@@ -14,7 +14,7 @@ from rest_framework import status,viewsets
 from rest_framework import authentication, permissions
 from .models import Post,Events,Client
 
-import logging 
+import logging
 
 
 class EventViewSet(APIView):
