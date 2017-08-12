@@ -25,10 +25,9 @@ admin.autodiscover()
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^posts/', views.PostViewSet.as_view()),
-    url(r'^post/(?P<pk>[0-9]+)$', views.PostDetail.as_view()),
-    url(r'^users/', views.UserList.as_view()),
-    url(r'^user/(?P<pk>[0-9]+)$', views.UserDetail.as_view()),
+    url(r'^events/', views.EventViewSet.as_view()),
+    url(r'^clients/', views.ClientList.as_view()),
+    url(r'^client/(?P<pk>[0-9]+)$', views.ClientDetail.as_view()),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns,allowed=['json', 'html'])
